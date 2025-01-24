@@ -1,0 +1,143 @@
+
+### Updated `CardSlider.css` Code
+```css
+body {
+  margin: 0;
+  background-color: #000;
+  color: #eee;
+  font-family: Poppins, sans-serif;
+}
+
+.carousel {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel .list {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel .list .item {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .list .item .content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel .list .item .author {
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.carousel .list .item .title {
+  font-size: 4em;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.carousel .list .item .topic {
+  font-size: 2em;
+  color: #f1683a;
+  margin-bottom: 20px;
+}
+
+.carousel .list .item .description {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+.carousel .list .item .buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.carousel .list .item .buttons button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.carousel .list .item .buttons button:first-child {
+  background-color: #f1683a;
+  color: #fff;
+}
+
+.carousel .list .item .buttons button:last-child {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #f1683a;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.arrows button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.arrows button:hover {
+  background-color: #f1683a;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel .list .item .content {
+    width: 90%;
+  }
+
+  .carousel .list .item .title {
+    font-size: 2.5em;
+  }
+
+  .carousel .list .item .topic {
+    font-size: 1.5em;
+  }
+
+  .carousel .list .item .description {
+    font-size: 0.9em;
+  }
+}
